@@ -5,9 +5,13 @@
 
 struct Empty {};
 
-struct EmptyVirt { virtual ~EmptyVirt() {} };
+struct EmptyVirt { 
+	virtual ~EmptyVirt() {} 
+};
 
-struct NotEmpty { int m_i; };
+struct NotEmpty { 
+	int m_i; 
+};
 
 struct NotEmptyVirt
 {
@@ -23,11 +27,21 @@ struct NotEmptyNonVirt
 
 int main()
 {
-	std::cout << sizeof(Empty) << std::endl;
-	std::cout << sizeof(EmptyVirt) << std::endl;
-	std::cout << sizeof(NotEmpty) << std::endl;
-	std::cout << sizeof(NotEmptyVirt) << std::endl;
-	std::cout << sizeof(NotEmptyNonVirt) << std::endl;
+	std::cout << "Empty " <<sizeof(Empty) << std::endl;
+	std::cout << "EmptyVirt " << sizeof(EmptyVirt) << std::endl;
+	std::cout << "NotEmpty " << sizeof(NotEmpty) << std::endl;
+	std::cout << "NotEmptyVirt " << sizeof(NotEmptyVirt) << std::endl;
+	std::cout << "NotEmptyNonVirt " << sizeof(NotEmptyNonVirt) << std::endl;
+
+	std::cout << "int " << sizeof(int) << std::endl;
+	std::cout << "float " << sizeof(float) << std::endl;
+	std::cout << "double " << sizeof(double) << std::endl;
+	std::cout << "char " << sizeof(char) << std::endl;
+	std::cout << "char* " << sizeof(char*) << std::endl;
+	std::cout << "int* " << sizeof(int*) << std::endl;
+	std::cout << "float* " << sizeof(float*) << std::endl;
+	std::cout << "double* " << sizeof(double*) << std::endl;
+
 
 	return EXIT_SUCCESS;
 }
